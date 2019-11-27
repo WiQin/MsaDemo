@@ -1,0 +1,31 @@
+#端口号配置
+#server:
+#  port: 8080
+  #映射路径
+#  servlet:
+#    path: /
+#日志级别
+logging:
+  level:
+    #包名：级别
+    com.wyw.msa: debug
+#静态资源访问  建议放在 resources/static包下
+#数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/msa_demo
+    username: root
+    password: root
+#mybatis
+mybatis:
+  #驼峰  通用mapper中已配置
+#  configuration:
+#    map-underscore-to-camel-case: true
+  #单标操作使用通用mapper代替，可不配
+  #mapper-locations: mapper/*.xml
+  #配置别名扫描包
+  type-aliases-package: com.wyw.msa.pojo
+  #mapper扫描器，扫描mapper接口  通过注解@MapperScan实现
+
+
